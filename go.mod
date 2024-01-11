@@ -4,7 +4,10 @@ go 1.19
 
 require gopkg.in/yaml.v3 v3.0.1
 
+require github.com/lib/pq v1.10.9 // indirect
+
 require (
+	github.com/jmoiron/sqlx v1.3.5
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/dig v1.17.0 // indirect
 	go.uber.org/fx v1.20.1 // indirect

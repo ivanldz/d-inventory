@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=d_inventory
+    container_name: postgres
+    volumes:
+      - ./_pgdata:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
