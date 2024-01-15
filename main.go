@@ -4,6 +4,7 @@ import (
 	"context"
 
 	"github.com/ivanldz/d-inventory/database"
+	"github.com/ivanldz/d-inventory/internal/repository"
 	"github.com/ivanldz/d-inventory/settings"
 	"github.com/jmoiron/sqlx"
 	"go.uber.org/fx"
@@ -15,6 +16,7 @@ func main() {
 			context.Background,
 			settings.New,
 			database.New,
+			repository.New,
 		),
 		fx.Invoke(
 			func(db *sqlx.DB) {
